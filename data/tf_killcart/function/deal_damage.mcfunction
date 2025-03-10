@@ -1,0 +1,1 @@
+$damage @e[type=!#tf_killcart:not_mob,distance=0..1, limit=1,tag=!kc_passenger] $(value) minecraft:mace_smash by @e[tag=kc_actual_slime,limit=1] from @e[tag=kc_actual_slime,limit=1]
