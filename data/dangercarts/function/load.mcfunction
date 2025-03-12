@@ -15,6 +15,12 @@ scoreboard objectives add kc_high dummy
 scoreboard objectives add kc_low_damage dummy
 scoreboard objectives add kc_medium_damage dummy
 scoreboard objectives add kc_high_damage dummy
+scoreboard objectives add kc_num dummy
+
+# Set constants
+scoreboard players set kc.global.1 kc_num 1
+scoreboard players set kc.global.2 kc_num 2 
+scoreboard players set kc.global.100 kc_num 100
 
 # Set default damage values
 execute unless data storage dangercarts:config kc_low_damage run data modify storage dangercarts:config kc_low_damage set value {"value":6}
