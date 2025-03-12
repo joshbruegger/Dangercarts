@@ -18,9 +18,9 @@ scoreboard objectives add dc_high_damage dummy
 scoreboard objectives add dc_num dummy
 
 # Set constants
-scoreboard players set kc.global.1 dc_num 1
-scoreboard players set kc.global.2 dc_num 2 
-scoreboard players set kc.global.100 dc_num 100
+scoreboard players set dc.vars.1 dc_num 1
+scoreboard players set dc.vars.2 dc_num 2 
+scoreboard players set dc.vars.100 dc_num 100
 
 # Set default damage values
 execute unless data storage dangercarts:config dc_low_damage run data modify storage dangercarts:config dc_low_damage set value {"value":2}
