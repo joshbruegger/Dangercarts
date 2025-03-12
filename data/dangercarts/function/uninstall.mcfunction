@@ -13,7 +13,7 @@ scoreboard objectives remove dc_high_damage
 scoreboard objectives remove dc_num
 
 # Math library
-scoreboard objectives remove math_sqrt
+scoreboard objectives remove dc_math_sqrt
 
 # Remove all data storage
 data remove storage dangercarts:config dc_low_damage
