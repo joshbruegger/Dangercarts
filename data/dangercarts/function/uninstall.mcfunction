@@ -1,30 +1,30 @@
 # Remove all scoreboard objectives
-scoreboard objectives remove kc_motion_x
-scoreboard objectives remove kc_motion_y
-scoreboard objectives remove kc_motion_z
-scoreboard objectives remove kc_motion_sum
-scoreboard objectives remove kc_motion_after
-scoreboard objectives remove kc_low
-scoreboard objectives remove kc_medium
-scoreboard objectives remove kc_high
-scoreboard objectives remove kc_low_damage
-scoreboard objectives remove kc_medium_damage
-scoreboard objectives remove kc_high_damage
-scoreboard objectives remove kc_num
+scoreboard objectives remove dc_motion_x
+scoreboard objectives remove dc_motion_y
+scoreboard objectives remove dc_motion_z
+scoreboard objectives remove dc_motion_sum
+scoreboard objectives remove dc_motion_after
+scoreboard objectives remove dc_low
+scoreboard objectives remove dc_medium
+scoreboard objectives remove dc_high
+scoreboard objectives remove dc_low_damage
+scoreboard objectives remove dc_medium_damage
+scoreboard objectives remove dc_high_damage
+scoreboard objectives remove dc_num
 
 # Math library
 scoreboard objectives remove math_sqrt
 
 # Remove all data storage
-data remove storage dangercarts:config kc_low_damage
-data remove storage dangercarts:config kc_medium_damage
-data remove storage dangercarts:config kc_high_damage
-data remove storage dangercarts:config kc_low
-data remove storage dangercarts:config kc_medium
-data remove storage dangercarts:config kc_high
+data remove storage dangercarts:config dc_low_damage
+data remove storage dangercarts:config dc_medium_damage
+data remove storage dangercarts:config dc_high_damage
+data remove storage dangercarts:config dc_low
+data remove storage dangercarts:config dc_medium
+data remove storage dangercarts:config dc_high
 
 # Kill any entities with custom tags created by this datapack
-kill @e[tag=kc_slime]
+kill @e[tag=dc_slime]
 
 # Display uninstall message
 tellraw @a {"text":"Dangercarts Datapack has been uninstalled","color":"red", "bold": true}
