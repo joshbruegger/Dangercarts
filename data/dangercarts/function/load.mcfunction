@@ -30,7 +30,7 @@ execute unless data storage dangercarts:config kc_high_damage run data modify st
 # Set default threshold values
 execute unless data storage dangercarts:config kc_low run data modify storage dangercarts:config kc_low set value {"value": 2}
 execute unless data storage dangercarts:config kc_medium run data modify storage dangercarts:config kc_medium set value {"value": 4}
-execute unless data storage dangercarts:config kc_high run data modify storage dangercarts:config kc_high set value {"value": 8}
+execute unless data storage dangercarts:config kc_high run data modify storage dangercarts:config kc_high set value {"value": 6}
 
 # Load config values into scoreboard
 function dangercarts:data_to_scoreboard
