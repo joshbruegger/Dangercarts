@@ -57,6 +57,16 @@ You can also use the following commands to set the values to some presets:
 - Damage is applied on top of the small damage dealt by the slime used to knockback entities.
 - It seems like the maximum speed of a minecart is 47 blocks per second, even if you set it higher using `gamerule minecartMaxSpeed` using the new Minecart Improvements experiment.
 
+## Uninstalling
+
+To uninstall the datapack, run the following command:
+
+```
+/function dangercarts:uninstall
+```
+
+This will remove all the scoreboard objectives and data storage used by the datapack. After running this command, you should disable or remove the datapack using `/datapack disable` or manually removing it from the datapacks folder before restarting the world/server.
+
 ## Reporting an issue / Contributing
 
 Please report issues and contribute to the project on the [Github page](https://github.com/joshbruegger/Dangerous-Minecarts).
