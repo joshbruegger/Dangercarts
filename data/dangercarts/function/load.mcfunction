@@ -27,26 +27,12 @@ execute unless data storage dangercarts:config kc_low_damage run data modify sto
 execute unless data storage dangercarts:config kc_medium_damage run data modify storage dangercarts:config kc_medium_damage set value {"value":12}
 execute unless data storage dangercarts:config kc_high_damage run data modify storage dangercarts:config kc_high_damage set value {"value":40}
 
-execute store result score kc.global kc_low_damage run data get storage dangercarts:config kc_low_damage.value
-execute store result score kc.global kc_medium_damage run data get storage dangercarts:config kc_medium_damage.value
-execute store result score kc.global kc_high_damage run data get storage dangercarts:config kc_high_damage.value
-
 # Set default threshold values
-execute unless data storage dangercarts:config kc_low run data modify storage dangercarts:config kc_low set value {"value": 560}
-execute unless data storage dangercarts:config kc_medium run data modify storage dangercarts:config kc_medium set value {"value": 810}
-execute unless data storage dangercarts:config kc_high run data modify storage dangercarts:config kc_high set value {"value": 1110}
+execute unless data storage dangercarts:config kc_low run data modify storage dangercarts:config kc_low set value {"value": 10}
+execute unless data storage dangercarts:config kc_medium run data modify storage dangercarts:config kc_medium set value {"value": 15}
+execute unless data storage dangercarts:config kc_high run data modify storage dangercarts:config kc_high set value {"value": 21}
 
-execute store result score kc.global kc_low run data get storage dangercarts:config kc_low.value
-execute store result score kc.global kc_medium run data get storage dangercarts:config kc_medium.value
-execute store result score kc.global kc_high run data get storage dangercarts:config kc_high.value
-
-# tellraw @p [{"text":"kc_low: ","color":"green"},{"score":{"name":"kc.global","objective":"kc_low"}},{"text":"\n","color":"gray"},{"text":"kc_medium: ","color":"green"},{"score":{"name":"kc.global","objective":"kc_medium"}},{"text":"\n","color":"gray"},{"text":"kc_high: ","color":"green"},{"score":{"name":"kc.global","objective":"kc_high"}}]
-
-# scoreboard players set kc.global kc_medium 810
-# scoreboard players set kc.global kc_high 1110
-
-# scoreboard players set kc.global kc_low_damage 6
-# scoreboard players set kc.global kc_medium_damage 12s
-# scoreboard players set kc.global kc_high_damage 40
+# Load config values into scoreboard
+function dangercarts:data_to_scoreboard
 
 function dangercarts:math/setup
