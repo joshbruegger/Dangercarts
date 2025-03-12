@@ -18,4 +18,4 @@
 scoreboard players operation out math_sqrt = in math_sqrt
 scoreboard players set tmp math_sqrt 1
 
-execute if score out math_sqrt > tmp math_sqrt run function tf_killcart:math/sqrt/private/loop
+execute if score out math_sqrt > tmp math_sqrt run function dangercarts:math/sqrt/private/loop

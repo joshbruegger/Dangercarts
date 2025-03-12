@@ -1,5 +1,3 @@
 {
-	"values": [
-	"tf_killcart:load"
-	]
+  "values": ["dangercarts:load"]
 }
