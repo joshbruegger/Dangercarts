@@ -69,7 +69,7 @@ This will remove all the scoreboard objectives and data storage used by the data
 
 ## Reporting an issue / Contributing
 
-Please report issues and contribute to the project on the [Github page](https://github.com/joshbruegger/Dangerous-Minecarts).
+Please report issues and contribute to the project on the [Github page](https://github.com/joshbruegger/Dangercarts).
 
 ## Credits
 
