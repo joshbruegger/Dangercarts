@@ -23,14 +23,14 @@ scoreboard players set kc.global.2 kc_num 2
 scoreboard players set kc.global.100 kc_num 100
 
 # Set default damage values
-execute unless data storage dangercarts:config kc_low_damage run data modify storage dangercarts:config kc_low_damage set value {"value":6}
-execute unless data storage dangercarts:config kc_medium_damage run data modify storage dangercarts:config kc_medium_damage set value {"value":12}
-execute unless data storage dangercarts:config kc_high_damage run data modify storage dangercarts:config kc_high_damage set value {"value":40}
+execute unless data storage dangercarts:config kc_low_damage run data modify storage dangercarts:config kc_low_damage set value {"value":2}
+execute unless data storage dangercarts:config kc_medium_damage run data modify storage dangercarts:config kc_medium_damage set value {"value":4}
+execute unless data storage dangercarts:config kc_high_damage run data modify storage dangercarts:config kc_high_damage set value {"value":7}
 
 # Set default threshold values
-execute unless data storage dangercarts:config kc_low run data modify storage dangercarts:config kc_low set value {"value": 10}
-execute unless data storage dangercarts:config kc_medium run data modify storage dangercarts:config kc_medium set value {"value": 15}
-execute unless data storage dangercarts:config kc_high run data modify storage dangercarts:config kc_high set value {"value": 21}
+execute unless data storage dangercarts:config kc_low run data modify storage dangercarts:config kc_low set value {"value": 2}
+execute unless data storage dangercarts:config kc_medium run data modify storage dangercarts:config kc_medium set value {"value": 4}
+execute unless data storage dangercarts:config kc_high run data modify storage dangercarts:config kc_high set value {"value": 8}
 
 # Load config values into scoreboard
 function dangercarts:data_to_scoreboard
