@@ -30,9 +30,9 @@ execute unless data storage dangercarts:config kc_low run data modify storage da
 execute unless data storage dangercarts:config kc_medium run data modify storage dangercarts:config kc_medium set value {"value": 810}
 execute unless data storage dangercarts:config kc_high run data modify storage dangercarts:config kc_high set value {"value": 1110}
 
-execute store result score kc.global kc_low run data get storage dangercarts:config kc_low
-execute store result score kc.global kc_medium run data get storage dangercarts:config kc_medium
-execute store result score kc.global kc_high run data get storage dangercarts:config kc_high
+execute store result score kc.global kc_low run data get storage dangercarts:config kc_low.value
+execute store result score kc.global kc_medium run data get storage dangercarts:config kc_medium.value
+execute store result score kc.global kc_high run data get storage dangercarts:config kc_high.value
 
 # tellraw @p [{"text":"kc_low: ","color":"green"},{"score":{"name":"kc.global","objective":"kc_low"}},{"text":"\n","color":"gray"},{"text":"kc_medium: ","color":"green"},{"score":{"name":"kc.global","objective":"kc_medium"}},{"text":"\n","color":"gray"},{"text":"kc_high: ","color":"green"},{"score":{"name":"kc.global","objective":"kc_high"}}]
 
