@@ -23,11 +23,8 @@ scoreboard players operation out dc_math_sqrt *= dc.vars.2 dc_num
 scoreboard players operation out dc_math_sqrt /= dc.vars.100 dc_num
 scoreboard players operation out dc_math_sqrt -= dc.vars.1 dc_num
 
-# Tag passenger to prevent dealing damage to them
-execute on passengers run tag @s add dc_passenger
-
-# Add named invisible slime to the cart for knockback and death cause
-execute if score out dc_math_sqrt > dc.vars dc_low as @e[type=!#dangercarts:not_mob,distance=0..1.5,tag=!dc_passenger] run summon area_effect_cloud ~ ~320 ~ {Duration:3,Tags:["dc_slime"],Passengers:[{id:"minecraft:slime",Tags:["dc_actual_slime"],Silent:1b,Invulnerable:1b,Size:1,CustomName:'{"text":"a fast minecart"}',ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Attributes:[{Name:generic.attack_damage,Base:0}]}]}
+# If damange is needed and damage entity doesn't exist, spawn it under the world
+execute if score out dc_math_sqrt > dc.vars dc_low run execute unless entity @e[tag=dc_actual_slime] run summon minecraft:arrow ~ -100 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,Tags:["dc_actual_slime"],CustomName:'{"text":"a fast minecart"}'}
 
 # high damage if speed is greater than high threshold
 execute if score out dc_math_sqrt > dc.vars dc_high run execute as @s run function dangercarts:deal_damage with storage dangercarts:config dc_high_damage
@@ -40,9 +37,6 @@ execute if score out dc_math_sqrt > dc.vars dc_low unless score out dc_math_sqrt
 
 # Teleport away invisible slime
 execute as @e[tag=dc_slime,nbt={Age:1}] at @s run tp @s ~ ~-320 ~
-
-# Remove tag from passengers after processing
-tag @e[tag=dc_passenger] remove dc_passenger
 
 # tellraw @p [{"text":"Cart Speed: ","color":"gold"},{"score":{"name":"out","objective":"dc_math_sqrt"},"color":"yellow"}]
 # tellraw @p [{"text":"High Damage Threshold: ","color":"dark_red"},{"score":{"name":"dc.vars","objective":"dc_high"},"color":"red"}]
